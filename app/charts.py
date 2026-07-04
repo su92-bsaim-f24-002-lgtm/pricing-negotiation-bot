@@ -1,6 +1,5 @@
 import plotly.graph_objects as go
 import pandas as pd
-import numpy as np
 
 
 def reward_curve(episode_df: pd.DataFrame) -> go.Figure:

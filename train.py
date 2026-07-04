@@ -13,8 +13,6 @@ print("Python executable:")
 print(sys.executable)
 print("=" * 60)
 
-from agent import PricingAgent
-
 load_dotenv()  # Reads .env file for WANDB_API_KEY
 
 

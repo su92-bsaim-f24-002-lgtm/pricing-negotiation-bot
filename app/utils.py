@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import yaml
 
-import environment
 from environment.pricing_env import PricingEnv
 from agent import PricingAgent
 
