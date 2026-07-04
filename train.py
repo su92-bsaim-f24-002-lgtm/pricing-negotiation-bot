@@ -1,25 +1,17 @@
-"""
-Main training entry point.
-
-Usage:
-python train.py                         # Default config, 500k steps
-python train.py --config high_lr        # Alternative hyperparams
-python train.py --timesteps 1000000     # Longer run
-python train.py --no-wandb              # Train without W&B (offline)
-"""
-
 import argparse
 import os
 import sys
+
+from dotenv import load_dotenv
+import wandb
+import yaml
+
+from agent import PricingAgent
 
 print("=" * 60)
 print("Python executable:")
 print(sys.executable)
 print("=" * 60)
-
-from dotenv import load_dotenv
-import wandb
-import yaml
 
 from agent import PricingAgent
 
