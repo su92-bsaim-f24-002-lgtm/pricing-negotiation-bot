@@ -1,0 +1,29 @@
+program: train.py
+
+command:
+  - C:\Users\lenovo\Desktop\pricing-negotiation-bot\.venv\Scripts\python.exe
+  - ${program}
+  - ${args}
+
+method: bayes
+
+metric:
+  name: eval/mean_reward
+  goal: maximize
+
+parameters:
+  learning_rate:
+    distribution: log_uniform_values
+    min: 0.00001
+    max: 0.001
+
+  clip_range:
+    values: [0.1, 0.2, 0.3, 0.4]
+
+  n_steps:
+    values: [128, 256, 512, 1024]
+
+  ent_coef:
+    distribution: log_uniform_values
+    min: 0.0001
+    max: 0.1

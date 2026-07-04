@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# W&B
+wandb/
+
+# TensorBoard logs
+outputs/logs/
+
+# Trained models
+outputs/models/
+
+# Keep evaluation outputs
+!outputs/results.csv
+!outputs/plots/
+!outputs/plots/policy_comparison.png
+
+# Streamlit
+.streamlit/
+
+# OS files
+.DS_Store
+Thumbs.db

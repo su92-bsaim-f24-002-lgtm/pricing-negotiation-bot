@@ -1,0 +1,7 @@
+total_timesteps: 500000
+n_envs: 4
+seed: 42
+eval_freq: 10000
+eval_episodes: 100
+model_save_path: outputs/models/ppo_pricing
+log_path: outputs/logs

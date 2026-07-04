@@ -1,0 +1,9 @@
+cost_per_unit: 10.0
+max_inventory: 100
+episode_days: 30
+max_demand: 50
+price_elasticity_k: 0.1
+holding_cost_per_unit: 0.5
+min_price: 5.0
+max_price: 50.0
+n_price_buckets: 10
