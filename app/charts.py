@@ -17,11 +17,12 @@ def reward_curve(episode_df: pd.DataFrame) -> go.Figure:
     )
 
     fig.update_layout(
-        title="Episode reward over time",
+        title="Episode Reward Over Time",
         xaxis_title="Day",
-        yaxis_title="Cumulative profit (£)",
+        yaxis_title="Cumulative Profit ($)",
         plot_bgcolor="white",
-        margin=dict(l=40, r=20, t=40, b=40),
+        margin=dict(l=40, r=20, t=60, b=40),
+        height=390,
     )
 
     return fig
@@ -54,16 +55,21 @@ def price_inventory_chart(episode_df: pd.DataFrame) -> go.Figure:
     )
 
     fig.update_layout(
-        title="Price strategy vs inventory level",
-        yaxis=dict(title="Price (£)"),
+        title="Price Strategy vs Inventory Level",
+        yaxis=dict(title="Price ($)"),
         yaxis2=dict(
             title="Inventory",
             overlaying="y",
             side="right",
         ),
-        legend=dict(orientation="h"),
+        legend=dict(
+            orientation="h",
+            y=1.08,
+            x=0,
+        ),
         plot_bgcolor="white",
-        margin=dict(l=40, r=40, t=40, b=40),
+        margin=dict(l=40, r=40, t=60, b=40),
+        height=390,
     )
 
     return fig
@@ -85,10 +91,11 @@ def policy_comparison_bar(results: dict[str, float]) -> go.Figure:
     )
 
     fig.update_layout(
-        title="Mean episode profit by policy",
-        yaxis_title="Mean profit (£)",
+        title="Mean Episode Profit by Policy",
+        yaxis_title="Mean Profit (£)",
         plot_bgcolor="white",
-        margin=dict(l=40, r=20, t=40, b=40),
+        margin=dict(l=40, r=20, t=60, b=40),
+        height=450,
     )
 
     return fig
